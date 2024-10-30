@@ -30,7 +30,7 @@ namespace Tyuiu.BaimuhametovaMD.Sprint5.Task1.V26
 
             string path = ds.SaveToFileTextData(start, end);
 
-            string[] res = File.ReadAllText(path).Trim().Split(" ");
+            string[] res = File.ReadAllText(path).Trim().Split("\n");
             Console.WriteLine("+--------+--------+\n" +
                               "|   x    |  f(x)  |\n" +
                               "+--------+--------+");
