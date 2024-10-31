@@ -13,7 +13,9 @@ namespace Tyuiu.BaimuhametovaMD.Sprint5.Task2.V27.Lib
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     if (matrix[i, j] % 2 != 0) matrix[i, j] = 0;
-                    File.AppendAllText(path, matrix[i, j] + ", ");
+                    File.AppendAllText(path, matrix[i, j].ToString());
+                    if (j != matrix.GetLength(1) - 1) File.AppendAllText(path, ";");
+                    else File.AppendAllText(path, "\n");
                 }
             }
             return path;
